@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+</head>
+<body>
+    <script>
+        const candidatos = {
+            candidato_X: 889,
+            candidato_Y: 847,
+            candidato_Z: 515,
+            branco: 0
+        }
+
+        voto = Number(prompt('Escolha em qual candidato você vota: \n1. Candidato X \n2. Candidato Y \n3. Candidato Z \n'))
+        alert('Você votou no candidato ' + String(voto)) 
+
+        if (voto != 1 && voto != 2 && voto != 3 && voto == 4) {
+            alert('Voto nulo!')
+            var nulo = nulo + 1
+            voto = Number(prompt('Escolha em qual candidato você vota: \n1. Candidato X \n2. Candidato Y \n3. Candidato Z \n'))
+            alert('Você votou no candidato ' + String(voto)) 
+        }
+
+        fim = prompt('Você deseja finalizar a votação S/N ?')
+        if (fim == 'N') {
+            alert('Desculpe só é possível votar uma vez')    
+        } else if (fim == 'S') {
+            alert('Obrigada por votar!')
+        }
+        alert('O candidato mais votado foi o candidato X com ' + candidatos.candidato_X + ' votos.')
+        alert('O candidato Y ficou com ' + candidatos.candidato_Y + ' votos.')
+        alert('O candidato Z ficou com ' + candidatos.candidato_Z + ' votos.')
+        alert('O total de votos em branco foi de ' + candidatos.branco + '.')
+        alert('O total de votos nulos foi ' + nulo + '.')
+    </script>
+</body>
+</html>
